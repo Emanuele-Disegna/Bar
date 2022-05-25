@@ -22,6 +22,12 @@ public class FXMLController {
 
 	@FXML
 	void handleSimula(ActionEvent event) {
+		model.simula();
+		
+		txtResult.clear();
+		txtResult.appendText("Il numero di clienti totali è di: "+model.getStats().getClientiTot()+"\n");
+		txtResult.appendText("Il numero di clienti insoddisfatti è di: "+model.getStats().getClientiInsoddisfatti()+"\n");
+		txtResult.appendText("Il numero di clienti soddisfatti è di: "+model.getStats().getClientiSoddisfatti());
 
 	}
 
